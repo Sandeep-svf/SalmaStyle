@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingBottom="30dp"
+                >
+
+                <include
+                    layout="@layout/scan_tab_toolbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/update_profile"
+                    />
+
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/profile_images"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_front_image"
+        app:siBorderColor="@color/white"
+        app:siBorderWidth="2sp"
+        app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/update_profile"
+        />
+
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_images"
+                    android:text="@string/upload_image"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:background="@color/green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/upload_image_button"
+                    />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/upload_image_button"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/email_tet_size"
+                android:fontFamily="sans-serif-medium"
+                android:id="@+id/txt_name"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_name"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_text_border"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:padding="10dp"
+                    android:hint="@string/name"
+                    android:id="@+id/edt_name_update"
+                    android:textColorHint="@color/black"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/email_tet_size"
+                android:fontFamily="sans-serif-medium"
+                android:id="@+id/txt_email_id"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_email_id"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_email"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_text_border"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:padding="10dp"
+                    android:hint="@string/email"
+                    android:id="@+id/edt_email_update"
+                    android:textColorHint="@color/black"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_email"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/email_tet_size"
+                android:fontFamily="sans-serif-medium"
+                android:id="@+id/txt_password"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_password"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_password"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/edit_text_border"
+                    android:id="@+id/phone_code"
+                    android:visibility="gone"
+                    >
+
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="+964"
+                        android:textColor="@color/english_blue"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="@dimen/login_phone_edit_text_size"
+                        />-->
+
+
+                    <Spinner
+                        android:id="@+id/spinner_country"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_text_border"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:hint="@string/phone_number"
+                    android:textSize="12sp"
+                    android:inputType="number"
+                    android:id="@+id/edt_phone_update"
+                   app:layout_constraintStart_toEndOf="@+id/phone_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColorHint="@color/black"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_update_profile1"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_password"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/green"
+                android:layout_marginTop="30dp"
+                app:cardElevation="8dp"
+
+                >
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_profile"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btn_update_profile1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="invisible"
+                android:layout_marginTop="5dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
